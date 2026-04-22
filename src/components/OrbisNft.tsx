@@ -14,11 +14,11 @@ const OrbisNft: React.FC<OrbisNftProps> = ({ onClose }) => {
   ];
 
   return (
-    <div className="relative w-full h-full bg-navy text-cream font-mono overflow-auto selection:bg-neon selection:text-navy">
+    <div className="relative w-full h-full bg-[#0a0a0c] text-cream font-sans overflow-auto selection:bg-neon selection:text-navy">
       {/* Texture Overlay */}
       <div className="fixed inset-0 z-50 pointer-events-none opacity-40 mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')] bg-repeat" />
       
-      {/* Close Button if used as overlay */}
+      {/* Close Button */}
       {onClose && (
         <button 
           onClick={onClose}
@@ -38,12 +38,12 @@ const OrbisNft: React.FC<OrbisNftProps> = ({ onClose }) => {
         </video>
         
         {/* Header */}
-        <header className="relative z-10 w-full max-w-[1831px] mx-auto px-6 md:px-12 py-10 md:py-16 flex justify-between items-center">
-          <div className="font-display text-[20px] md:text-[24px] uppercase tracking-[0.3em] font-black text-neon drop-shadow-lg">Orbis.Nft</div>
+        <header className="relative z-10 w-full max-w-[1831px] mx-auto px-6 md:px-12 py-8 md:py-12 flex justify-between items-center">
+          <div className="font-display text-[22px] md:text-[28px] uppercase tracking-[0.4em] font-extrabold text-neon drop-shadow-lg">Orbis.Nft</div>
           
-          <nav className="hidden lg:flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full px-12 py-6 shadow-2xl">
+          <nav className="hidden lg:flex items-center gap-6 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full px-10 py-5 shadow-2xl">
             {['Homepage', 'Gallery', 'Buy NFT', 'FAQ', 'Contact'].map((link) => (
-              <button key={link} className="font-display text-[14px] uppercase px-4 hover:text-neon transition-all hover:-translate-y-0.5 active:translate-y-0 tracking-widest cursor-pointer">
+              <button key={link} className="font-heading text-[13px] font-semibold uppercase px-4 hover:text-neon transition-all hover:-translate-y-0.5 active:translate-y-0 tracking-widest cursor-pointer">
                 {link}
               </button>
             ))}
@@ -64,10 +64,10 @@ const OrbisNft: React.FC<OrbisNftProps> = ({ onClose }) => {
         </header>
 
         {/* Hero Content */}
-        <div className="relative z-10 flex-grow flex flex-col justify-center max-w-[1831px] mx-auto w-full px-6 md:px-12 pb-32">
-          <div className="relative lg:ml-24 xl:ml-32 w-fit">
+        <div className="relative z-10 flex-grow flex flex-col justify-center max-w-[1831px] mx-auto w-full px-6 md:px-12 pb-24 md:pb-32">
+          <div className="relative lg:ml-12 xl:ml-24 w-fit">
             <div className="relative">
-              <h1 className="font-display text-[48px] sm:text-[70px] md:text-[100px] lg:text-[140px] uppercase leading-[0.85] tracking-tighter mix-blend-plus-lighter text-cream">
+              <h1 className="font-display text-[10vw] sm:text-[8vw] md:text-[6vw] xl:text-[100px] font-extrabold uppercase leading-[0.95] tracking-[-0.04em] text-transparent bg-clip-text bg-gradient-to-br from-white via-cream to-white/70 drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] [text-shadow:4px_4px_0px_rgba(0,0,0,0.2)]">
                 Beyond earth<br />
                 and ( its ) familiar<br />
                 boundaries
@@ -75,16 +75,14 @@ const OrbisNft: React.FC<OrbisNftProps> = ({ onClose }) => {
               <motion.div 
                 initial={{ opacity: 0, scale: 0.8, x: 20 }}
                 whileInView={{ opacity: 1, scale: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-                className="absolute -top-10 -right-4 sm:-right-24 md:-right-40 font-condiment text-[32px] md:text-[90px] text-neon -rotate-3 drop-shadow-[0_0_15px_rgba(111,255,0,0.4)] pointer-events-none"
+                transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
+                className="absolute -top-12 -right-4 sm:-top-14 sm:-right-8 md:-top-16 md:-right-24 font-condiment text-[32px] sm:text-[40px] md:text-[60px] lg:text-[80px] text-neon -rotate-6 drop-shadow-[0_0_20px_rgba(111,255,0,0.6)] pointer-events-none select-none"
               >
                 Nft collection
               </motion.div>
             </div>
           </div>
           
-          {/* Mobile Socials */}
-
           <div className="flex lg:hidden justify-center gap-6 mt-16">
             {[Mail, Twitter, Github].map((Icon, i) => (
               <button key={i} className="w-[56px] h-[56px] liquid-glass rounded-[1rem] flex items-center justify-center active:scale-90 transition-transform">
@@ -101,7 +99,7 @@ const OrbisNft: React.FC<OrbisNftProps> = ({ onClose }) => {
       </section>
 
       {/* SECTION 2: ABOUT */}
-      <section className="relative w-full min-h-screen py-24 md:py-32 flex flex-col justify-center bg-navy">
+      <section className="relative w-full min-h-screen py-24 md:py-32 flex flex-col justify-center bg-[#0a0a0c]">
         <video 
           autoPlay loop muted playsInline 
           className="absolute inset-0 w-full h-full object-cover z-0 opacity-80"
@@ -110,42 +108,42 @@ const OrbisNft: React.FC<OrbisNftProps> = ({ onClose }) => {
         </video>
         
         <div className="relative z-10 max-w-[1831px] mx-auto px-6 md:px-12 flex flex-col justify-between h-full w-full">
-          <div className="flex flex-col lg:flex-row justify-between items-start gap-16 md:gap-24 mb-32">
+          <div className="flex flex-col lg:flex-row justify-between items-start gap-12 md:gap-24 mb-24 md:mb-32">
             <div className="relative">
-              <h2 className="font-display text-[48px] sm:text-[60px] md:text-[90px] uppercase leading-[0.85] tracking-tighter">
+              <h2 className="font-display text-[40px] sm:text-[50px] md:text-[80px] font-extrabold uppercase leading-[0.9] tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-white to-white/60 [text-shadow:3px_3px_0px_rgba(0,0,0,0.3)]">
                 Hello!<br />
                 I'm orbis
               </h2>
-              <div className="absolute -bottom-8 -right-8 md:-right-20 font-condiment text-[42px] md:text-[90px] text-neon -rotate-6 mix-blend-exclusion opacity-90">
+              <div className="absolute -bottom-6 -right-6 md:-bottom-12 md:-right-16 font-condiment text-[36px] sm:text-[50px] md:text-[90px] text-neon -rotate-12 mix-blend-exclusion opacity-90 drop-shadow-[0_0_15px_rgba(111,255,0,0.5)]">
                 Orbis
               </div>
             </div>
-            <div className="max-w-[400px]">
-              <p className="font-mono text-[15px] md:text-[18px] uppercase leading-relaxed text-cream/90 border-l border-neon/30 pl-8">
+            <div className="max-w-[450px]">
+              <p className="font-heading font-medium text-[16px] md:text-[20px] uppercase leading-relaxed text-cream/90 border-l-2 border-neon/50 pl-8 md:pl-10">
                 A digital object fixed beyond time and place. An exploration of distance, form, and silence in space. Experience the void through algorithmic artistry.
               </p>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 items-end">
-            <div className="flex flex-col gap-6 opacity-30 hover:opacity-80 transition-opacity">
-              <p className="font-mono text-[14px] uppercase tracking-wide">
+            <div className="flex flex-col gap-6 opacity-40 hover:opacity-100 transition-opacity">
+              <p className="font-mono text-[13px] md:text-[14px] uppercase tracking-wider">
                 [ 01 ] A digital object fixed beyond time and place.
               </p>
-              <p className="font-mono text-[14px] uppercase tracking-wide">
+              <p className="font-mono text-[13px] md:text-[14px] uppercase tracking-wider">
                 [ 02 ] An exploration of distance, form, and silence.
               </p>
             </div>
-            <div className="hidden lg:flex flex-col gap-6 opacity-20 text-center">
-              <p className="font-mono text-[14px] uppercase">PROJECT CODE: ORBIS-001</p>
-              <div className="h-[1px] w-full bg-cream/20" />
-              <p className="font-mono text-[14px] uppercase">STATUS: EXPLORATORY</p>
+            <div className="hidden lg:flex flex-col gap-6 opacity-30 text-center">
+              <p className="font-mono text-[13px] uppercase tracking-widest">PROJECT CODE: ORBIS-001</p>
+              <div className="h-[1px] w-full bg-cream/10" />
+              <p className="font-mono text-[13px] uppercase tracking-widest">STATUS: EXPLORATORY</p>
             </div>
-            <div className="hidden md:flex flex-col gap-6 opacity-30 text-right hover:opacity-80 transition-opacity">
-              <p className="font-mono text-[14px] uppercase tracking-wide">
+            <div className="hidden md:flex flex-col gap-6 opacity-40 text-right hover:opacity-100 transition-opacity">
+              <p className="font-mono text-[13px] md:text-[14px] uppercase tracking-wider">
                 A digital object fixed beyond time and place.
               </p>
-              <p className="font-mono text-[14px] uppercase tracking-wide">
+              <p className="font-mono text-[13px] md:text-[14px] uppercase tracking-wider">
                 An exploration of distance, form, and silence in space.
               </p>
             </div>
@@ -154,28 +152,28 @@ const OrbisNft: React.FC<OrbisNftProps> = ({ onClose }) => {
       </section>
 
       {/* SECTION 3: COLLECTION */}
-      <section className="relative w-full bg-navy py-24 md:py-40">
+      <section className="relative w-full bg-[#0a0a0c] py-24 md:py-40">
         <div className="max-w-[1831px] mx-auto px-6 md:px-12">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 md:mb-32 gap-12">
-            <div className="flex flex-col relative">
-              <h2 className="font-display text-[48px] sm:text-[60px] md:text-[90px] uppercase leading-[0.8] tracking-tighter">
+            <div className="flex flex-col relative w-full md:w-auto">
+              <h2 className="font-display text-[48px] sm:text-[60px] md:text-[80px] font-extrabold uppercase leading-[0.8] tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-white to-white/40">
                 Collection of
               </h2>
-              <div className="flex items-center ml-8 sm:ml-16 md:ml-24 lg:ml-40 mt-4 h-fit">
-                <span className="font-condiment text-[48px] sm:text-[60px] md:text-[90px] text-neon mr-8 mb-2 whitespace-nowrap">Space</span>
-                <span className="font-display text-[48px] sm:text-[60px] md:text-[90px] uppercase tracking-tighter">objects</span>
+              <div className="flex items-center ml-4 sm:ml-12 md:ml-24 lg:ml-32 mt-2 h-fit">
+                <span className="font-condiment text-[42px] sm:text-[60px] md:text-[90px] text-neon mr-6 sm:mr-8 mb-2 whitespace-nowrap drop-shadow-[0_0_20px_rgba(111,255,0,0.4)]">Space</span>
+                <span className="font-display text-[48px] sm:text-[60px] md:text-[80px] font-extrabold uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-white/90 to-white/40 [text-shadow:4px_4px_0px_rgba(0,0,0,0.2)]">objects</span>
               </div>
             </div>
             
             <button className="flex flex-col items-start group self-end md:mb-4">
               <div className="flex items-end gap-3 translate-y-2">
-                <span className="font-display text-[32px] md:text-[60px] uppercase leading-none">SEE</span>
+                <span className="font-display text-[32px] md:text-[54px] font-extrabold uppercase leading-none">SEE</span>
                 <div className="flex flex-col">
-                  <span className="font-display text-[18px] md:text-[32px] uppercase leading-none">ALL</span>
-                  <span className="font-display text-[18px] md:text-[32px] uppercase leading-none">CREATORS</span>
+                  <span className="font-display text-[18px] md:text-[28px] font-bold uppercase leading-none">ALL</span>
+                  <span className="font-display text-[18px] md:text-[28px] font-bold uppercase leading-none">CREATORS</span>
                 </div>
               </div>
-              <div className="w-full h-[6px] md:h-[10px] bg-neon mt-4 transition-all duration-500 group-hover:scale-x-125 origin-left" />
+              <div className="w-full h-[6px] md:h-[8px] bg-neon mt-4 transition-all duration-500 group-hover:scale-x-125 origin-left" />
             </button>
           </div>
 
@@ -208,27 +206,27 @@ const OrbisNft: React.FC<OrbisNftProps> = ({ onClose }) => {
       </section>
 
       {/* SECTION 4: CTA */}
-      <section className="relative w-full bg-navy pb-40 overflow-hidden">
+      <section className="relative w-full bg-[#0a0a0c] pb-40 overflow-hidden">
         <div className="relative w-full max-w-[1831px] mx-auto group">
           <video 
             autoPlay loop muted playsInline 
-            className="w-full h-auto block z-0 rounded-[40px] opacity-70 group-hover:opacity-100 transition-opacity duration-1000"
+            className="w-full h-auto block z-0 rounded-[30px] md:rounded-[60px] opacity-70 group-hover:opacity-100 transition-opacity duration-1000"
           >
             <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260331_055729_72d66327-b59e-4ae9-bb70-de6ccb5ecdb0.mp4" type="video/mp4" />
           </video>
           
-          <div className="absolute inset-x-0 bottom-0 top-0 z-10 flex flex-col justify-center items-end lg:pr-[15%] lg:pl-[15%] text-right px-6 md:px-12 bg-gradient-to-l from-navy/60 to-transparent rounded-[40px]">
+          <div className="absolute inset-0 z-10 flex flex-col justify-center items-end lg:pr-[12vw] lg:pl-[12vw] text-right px-6 md:px-12 bg-gradient-to-l from-[#0a0a0c]/80 via-[#0a0a0c]/20 to-transparent rounded-[30px] md:rounded-[60px]">
             <div className="relative">
               <motion.div 
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                className="absolute -top-12 sm:-top-20 right-0 font-condiment text-[32px] md:text-[84px] text-neon mix-blend-exclusion -rotate-2 pointer-events-none"
+                className="absolute -top-12 sm:-top-20 right-0 font-condiment text-[36px] sm:text-[50px] md:text-[80px] lg:text-[100px] text-neon mix-blend-exclusion -rotate-2 pointer-events-none"
               >
                 Go beyond
               </motion.div>
-              <h2 className="font-display text-[32px] sm:text-[48px] md:text-[80px] lg:text-[100px] uppercase leading-[0.9] tracking-tighter">
-                <div className="mb-6 md:mb-12">JOIN US.</div>
-                REVEAL WHAT'S <span className="text-neon">HIDDEN</span>.<br />
+              <h2 className="font-display text-[26px] sm:text-[40px] md:text-[60px] lg:text-[80px] xl:text-[90px] font-extrabold uppercase leading-[0.9] tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-white via-white/80 to-white/40 [text-shadow:4px_4px_0px_rgba(0,0,0,0.4)]">
+                <div className="mb-4 md:mb-10">JOIN US.</div>
+                REVEAL WHAT'S <span className="text-neon drop-shadow-[0_0_15px_rgba(111,255,0,0.5)]">HIDDEN</span>.<br />
                 DEFINE WHAT'S NEXT.<br />
                 FOLLOW THE SIGNAL.
               </h2>
