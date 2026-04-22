@@ -19,20 +19,16 @@ import {
   Plus,
   Eye
 } from 'lucide-react';
-// --- Asset Paths (Configured for maximum reliability on Vercel) ---
-const heroVideo = '/assets/15684751_3840_2160_24fps.mp4';
-const orbisCover = '/assets/orbis-cover.png';
-const clothingImg = '/assets/Clothing.png';
-const corporateImg = '/assets/corporate.png';
-const restaurantImg = '/assets/restaurant.png';
-const realEstateImg = '/assets/real-estate.png';
-const portfolioImg = '/assets/Portfolio.png';
-const saasImg = '/assets/SAAS.png';
-const skyeliteImg = '/assets/skyelite.png';
-
-// Fallback External Assets (Ensures site never looks "empty" even if GitHub sync fails binary files)
-const FALLBACK_VIDEO = "https://cdn.pixabay.com/video/2023/10/20/185791-876356743_large.mp4";
-const FALLBACK_IMG = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200";
+// --- Asset Paths (Static root for Vercel - Lowercase for reliability) ---
+const heroVideo = '/hero-bg.mp4';
+const orbisCover = '/orbis-cover.png';
+const clothingImg = '/clothing.png';
+const corporateImg = '/corporate.png';
+const restaurantImg = '/restaurant.png';
+const realEstateImg = '/real-estate.png';
+const portfolioImg = '/portfolio.png';
+const saasImg = '/saas.png';
+const skyeliteImg = '/skyelite.png';
 
 import OrbisNft from './components/OrbisNft';
 import SkyElite from './components/SkyElite';
@@ -245,9 +241,6 @@ const Cylinder3D = () => {
                       className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-700" 
                       alt={card.title} 
                       referrerPolicy="no-referrer"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).src = FALLBACK_IMG;
-                      }}
                     />
                     <div className="absolute inset-x-0 bottom-0 p-3 md:p-6 bg-gradient-to-t from-black via-black/80 to-transparent">
                       <div className="font-bold text-white mb-1 md:mb-2 leading-tight uppercase tracking-tighter text-xs md:text-lg">{card.title}</div>
@@ -284,14 +277,7 @@ const Hero = () => {
                 key={heroVideo}
                 className="w-full h-full object-cover opacity-60 scale-105"
             >
-                <source src={heroVideo} type="video/mp4" onError={(e) => {
-                  const target = e.target as HTMLSourceElement;
-                  if (target.parentElement) {
-                    const video = target.parentElement as HTMLVideoElement;
-                    video.src = FALLBACK_VIDEO;
-                    video.load();
-                  }
-                }} />
+                <source src={heroVideo} type="video/mp4" />
             </video>
             {/* Vignette & Grain */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black pointer-events-none" />
@@ -417,9 +403,6 @@ const ProjectCard: React.FC<{ title: string, img: string, cat: string, color: st
           className="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-all duration-700 scale-100 group-hover:scale-110" 
           alt={title} 
           referrerPolicy="no-referrer" 
-          onError={(e) => {
-            (e.target as HTMLImageElement).src = FALLBACK_IMG;
-          }}
         />
         <div className="absolute inset-x-0 bottom-0 p-8 flex flex-col justify-end h-1/2 bg-gradient-to-t from-black to-transparent opacity-100 group-hover:opacity-0 transition-opacity" />
         
