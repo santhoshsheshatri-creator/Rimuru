@@ -1,4 +1,6 @@
-# Treat images and videos as binary files
+* text=auto
+
+# Treat images and videos as binary files - DO NOT CONVERT
 *.png binary
 *.jpg binary
 *.jpeg binary
@@ -6,3 +8,4 @@
 *.mp4 binary
 *.webm binary
 *.mov binary
+*.ico binary

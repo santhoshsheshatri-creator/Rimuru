@@ -19,15 +19,16 @@ import {
   Plus,
   Eye
 } from 'lucide-react';
-import heroVideo from './assets/rimuru-hero.mp4';
-import orbisCover from './assets/rimuru-orbis.png';
-import clothingImg from './assets/rimuru-clothing.png';
-import corporateImg from './assets/rimuru-corporate.png';
-import restaurantImg from './assets/rimuru-restaurant.png';
-import realEstateImg from './assets/rimuru-real-estate.png';
-import portfolioImg from './assets/rimuru-portfolio.png';
-import saasImg from './assets/rimuru-saas.png';
-import skyeliteImg from './assets/rimuru-skyelite.png';
+// --- Asset Paths (Forced Clean Binary - Root Public Folder) ---
+const heroVideo = '/rimuru-assets/rimuru-hero.mp4';
+const orbisCover = '/rimuru-assets/rimuru-orbis.png';
+const clothingImg = '/rimuru-assets/rimuru-clothing.png';
+const corporateImg = '/rimuru-assets/rimuru-corporate.png';
+const restaurantImg = '/rimuru-assets/rimuru-restaurant.png';
+const realEstateImg = '/rimuru-assets/rimuru-real-estate.png';
+const portfolioImg = '/rimuru-assets/rimuru-portfolio.png';
+const saasImg = '/rimuru-assets/rimuru-saas.png';
+const skyeliteImg = '/rimuru-assets/rimuru-skyelite.png';
 
 import OrbisNft from './components/OrbisNft';
 import SkyElite from './components/SkyElite';
