@@ -19,16 +19,15 @@ import {
   Plus,
   Eye
 } from 'lucide-react';
-// --- Asset Paths (Original Assets - Root Public Folder) ---
-const heroVideo = '/15684751_3840_2160_24fps.mp4';
-const orbisCover = '/orbis-cover.png';
-const clothingImg = '/Clothing.png';
-const corporateImg = '/corporate.png';
-const restaurantImg = '/restaurant.png';
-const realEstateImg = '/real-estate.png';
-const portfolioImg = '/Portfolio.png';
-const saasImg = '/SAAS.png';
-const skyeliteImg = '/skyelite.png';
+import heroVideo from './assets/rimuru-hero.mp4';
+import orbisCover from './assets/rimuru-orbis.png';
+import clothingImg from './assets/rimuru-clothing.png';
+import corporateImg from './assets/rimuru-corporate.png';
+import restaurantImg from './assets/rimuru-restaurant.png';
+import realEstateImg from './assets/rimuru-real-estate.png';
+import portfolioImg from './assets/rimuru-portfolio.png';
+import saasImg from './assets/rimuru-saas.png';
+import skyeliteImg from './assets/rimuru-skyelite.png';
 
 import OrbisNft from './components/OrbisNft';
 import SkyElite from './components/SkyElite';
