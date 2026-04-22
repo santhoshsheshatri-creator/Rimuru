@@ -19,15 +19,15 @@ import {
   Plus,
   Eye
 } from 'lucide-react';
-import heroVideo from './15684751_3840_2160_24fps.mp4';
-import orbisCover from './orbis-cover.png';
-import clothingImg from './Clothing.png';
-import corporateImg from './corporate.png';
-import restaurantImg from './restaurant.png';
-import realEstateImg from './real-estate.png';
-import portfolioImg from './Portfolio.png';
-import saasImg from './SAAS.png';
-import skyeliteImg from './components/skyelite.png';
+const heroVideo = '/15684751_3840_2160_24fps.mp4';
+const orbisCover = '/orbis-cover.png';
+const clothingImg = '/Clothing.png';
+const corporateImg = '/corporate.png';
+const restaurantImg = '/restaurant.png';
+const realEstateImg = '/real-estate.png';
+const portfolioImg = '/Portfolio.png';
+const saasImg = '/SAAS.png';
+const skyeliteImg = '/skyelite.png';
 import OrbisNft from './components/OrbisNft';
 import SkyElite from './components/SkyElite';
 
