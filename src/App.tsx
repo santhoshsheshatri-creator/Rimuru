@@ -19,16 +19,16 @@ import {
   Plus,
   Eye
 } from 'lucide-react';
-// --- Asset Paths (Forced Clean Binary - Root Public Folder) ---
-const heroVideo = '/rimuru-assets/rimuru-hero.mp4';
-const orbisCover = '/rimuru-assets/rimuru-orbis.png';
-const clothingImg = '/rimuru-assets/rimuru-clothing.png';
-const corporateImg = '/rimuru-assets/rimuru-corporate.png';
-const restaurantImg = '/rimuru-assets/rimuru-restaurant.png';
-const realEstateImg = '/rimuru-assets/rimuru-real-estate.png';
-const portfolioImg = '/rimuru-assets/rimuru-portfolio.png';
-const saasImg = '/rimuru-assets/rimuru-saas.png';
-const skyeliteImg = '/rimuru-assets/rimuru-skyelite.png';
+// --- Asset Paths (Cloudinary Hosted - 100% Reliable Build) ---
+const heroVideo = 'https://res.cloudinary.com/dgqsatuk8/video/upload/v1776855408/15684751_3840_2160_24fps_u73u5g.mp4';
+const orbisCover = 'https://res.cloudinary.com/dgqsatuk8/image/upload/v1776855548/orbit-cover_uvw7ht.png';
+const clothingImg = 'https://res.cloudinary.com/dgqsatuk8/image/upload/v1776855545/Clothing_zeqjtj.png';
+const corporateImg = 'https://res.cloudinary.com/dgqsatuk8/image/upload/v1776855552/corporate_c7acyx.png';
+const restaurantImg = 'https://res.cloudinary.com/dgqsatuk8/image/upload/v1776855548/restaurant_xexcqe.png';
+const realEstateImg = 'https://res.cloudinary.com/dgqsatuk8/image/upload/v1776855553/real-estate_cxqqrz.png';
+const portfolioImg = 'https://res.cloudinary.com/dgqsatuk8/image/upload/v1776855547/Portfolio_xozwet.png';
+const saasImg = 'https://res.cloudinary.com/dgqsatuk8/image/upload/v1776855550/SAAS_cwpbx3.png';
+const skyeliteImg = 'https://res.cloudinary.com/dgqsatuk8/image/upload/v1776855552/skyelite_akjntd.png';
 
 import OrbisNft from './components/OrbisNft';
 import SkyElite from './components/SkyElite';
