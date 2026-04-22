@@ -1,0 +1,8 @@
+# Treat images and videos as binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.mp4 binary
+*.webm binary
+*.mov binary
